@@ -1,0 +1,18 @@
+# Build directories
+cmake-build-debug
+out
+build
+dist
+target
+
+# Dependencies
+node_modules
+
+# Build tools
+.gradle
+yarn-error.log
+npm-debug.log
+
+# Editors
+.vscode
+.idea

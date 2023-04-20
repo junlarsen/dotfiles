@@ -1,0 +1,31 @@
+[user]
+	name = Mats Larsen
+	email = me@supergrecko.com
+	signingkey = 09A66484A4FA8DF6
+[credential]
+	helper = store
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+[ui]
+	color = true
+[alias]
+	l1 = log --oneline
+	s = status
+	b = checkout -b
+	ch = checkout
+	pu = push -u
+	undo = reset --soft HEAD~1
+	sh = show HEAD
+	rbm = rebase origin/main
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

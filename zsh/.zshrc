@@ -39,8 +39,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export PATH="$HOME/dotty/tools:$PATH"
 
 alias bye="exit"
-alias rrr="source ~/.zshrc"
-alias ged="code ~/.git-credentials"
+alias rrr="source $HOME/.zshrc"
+alias ged="code $HOME/.git-credentials"
 
 # Dotty PATH exports. Always keep this at the bottom of the file
 export PATH="/home/jun/dotty/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"

@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+if [[ $# -eq 0 ]]; then
+  echo "usage: dotty-link <dotfile-package>"
+  exit 1
+fi
+
+DOTTY_HOME=$(cat ~/.dotty_installation)
+stow -Rvt ~ "$1" -d "$DOTTY_HOME"

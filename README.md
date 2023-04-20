@@ -24,6 +24,8 @@ the bootstrap.sh script in the same directory as you cloned this repository in.
 ```sh
 # Let's install zsh dotfiles with dotty installation in ~/dotty
 stow zsh -Rvt ~ -d dotty
+# Or alternatively
+dotty-link zsh
 ```
 
 To extract and install any of the packages, use the install script. This 
@@ -31,4 +33,6 @@ will execute the install.sh script for the corresponding package.
 
 ```sh
 ./install.sh discord
+# Or alternatively
+dotty-install discord
 ```

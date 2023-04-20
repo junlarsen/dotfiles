@@ -6,7 +6,7 @@ export DOTTY_ENV=$DOTTY_HOME/zsh/.zshrc
 
 # Bash Script to install one of the packages inside /packages
 if [[ $# -eq 0 ]]; then
-  echo "usage: install.sh <package>"
+  echo "usage: dotty-install <package>"
   exit 1
 fi
 

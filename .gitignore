@@ -1,8 +1,8 @@
 .idea
 
 dotty/.dotty_installation
-git/.git-credentials
-aws/.aws/credentials
+config/git/.git-credentials
+config/aws/.aws/credentials
 
 # Installer tarballs should be included in the repository to be able to
 # reproduce the same versions and installations, but we don't want to include

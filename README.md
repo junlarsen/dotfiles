@@ -36,3 +36,19 @@ will execute the install.sh script for the corresponding package.
 # Or alternatively
 dotty-install discord
 ```
+
+## File structure
+
+The dotfiles are organized into four distinct categories:
+
+- config: the actual dotfiles, split by program which are all merged into ~ by
+  stow.
+- scripts: system-wide scripts that are expected to be ran only once, such as
+  configuring gnome keybindings, changing input method framework, etc.
+- tools: executable scripts added to path, mostly dotty-specific stuff
+- packages: installation scripts for various programs such as Anki, Chrome,
+  VSCode, etc that are single-command installable with `dotty-install`.
+
+## License
+
+MIT, see LICENSE file for more information.

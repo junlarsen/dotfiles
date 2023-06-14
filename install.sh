@@ -2,7 +2,7 @@
 
 # Export a few utility variables
 export DOTTY_HOME=$(cat ~/.dotty_installation)
-export DOTTY_ENV=$DOTTY_HOME/zsh/.zshrc
+export DOTTY_ENV=$DOTTY_HOME/config/zsh/.zshrc
 
 # Bash Script to install one of the packages inside /packages
 if [[ $# -eq 0 ]]; then

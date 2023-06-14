@@ -14,6 +14,7 @@ break without the proper dependencies.
 - Zsh as your user shell
 - Git, grab something newer than what's on 22.04's default
 - Stow, take a recent one to be safe
+- gnupg2
 
 ## Installing
 

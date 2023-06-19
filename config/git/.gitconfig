@@ -1,7 +1,7 @@
 [user]
 	name = Mats Larsen
 	email = mats@jun.codes
-	signingkey = 09A66484A4FA8DF6
+	signingkey = 17C60B5359158F95
 [credential]
 	helper = store
 [gpg]

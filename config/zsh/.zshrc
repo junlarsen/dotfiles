@@ -78,6 +78,9 @@ alias bye="exit"
 alias rrr="source $HOME/.zshrc"
 alias ged="code $HOME/.git-credentials"
 
+alias gfmt="git diff --name-only -P | xargs npx prettier --write"
+alias godspeed="sudo iwconfig wlp0s20f3 power off"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

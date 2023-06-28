@@ -22,3 +22,6 @@ gsettings set org.gnome.shell.keybindings switch-to-application-6 "['<Super>6']"
 gsettings set org.gnome.shell.keybindings switch-to-application-7 "['<Super>7']"
 gsettings set org.gnome.shell.keybindings switch-to-application-8 "['<Super>8']"
 gsettings set org.gnome.shell.keybindings switch-to-application-9 "['<Super>9']"
+
+# Color theme
+gsettings set org.gnome.shell.extensions.pop-shell hint-color-rgba "rgba(72,185,199,1)"

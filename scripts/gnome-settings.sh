@@ -4,7 +4,8 @@
 gsettings set org.gnome.nautilus.icon-view default-zoom-level small
 
 # Modify dock icon size because the defaults are too large
-gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 32
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 24
+gsettings set org.gnome.shell.extensions.dash-to-dock background-color "#48b9c7"
 
 # Add keybindings to minimize current window with Super + H
 gsettings set org.gnome.desktop.wm.keybindings minimize "['<Super>H']"

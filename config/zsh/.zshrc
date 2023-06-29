@@ -77,11 +77,15 @@ export PATH="$HOME/dotty/tools:$PATH"
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
 alias ged="code $HOME/.git-credentials"
+alias zshed="code $HOME/.zshrc"
 
 alias gfmt="git diff --name-only -P | xargs npx prettier --write"
 alias godspeed="sudo iwconfig wlp0s20f3 power off"
 
 alias gdp="git diff --patch"
+
+# Install hooks to jump
+eval "$(jump shell --bind z)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

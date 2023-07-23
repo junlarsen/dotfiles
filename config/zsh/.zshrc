@@ -107,5 +107,5 @@ export JAVA_HOME="/home/jun/.jdks/openjdk-20.0.1"
 
 # Dotty PATH exports. Always keep this at the bottom of the file
 export PATH="/home/jun/dotty/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"
-export PATH="/home/jun/dotty/packages/anki/anki-2.1.62-linux-qt6:$PATH"
 export PATH="/home/jun/dotty/packages/gradle/gradle-8.3/bin:$PATH"
+export PATH="/home/jun/dotty/packages/anki/anki-2.1.65-linux-qt6:$PATH"

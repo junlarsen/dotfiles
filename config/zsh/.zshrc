@@ -84,6 +84,8 @@ alias godspeed="sudo iwconfig wlp0s20f3 power off"
 
 alias gdp="git diff --patch"
 
+export PATH="/home/jun/bin:$PATH"
+
 # Install hooks to jump
 eval "$(jump shell --bind z)"
 

@@ -5,7 +5,7 @@ gsettings set org.gnome.nautilus.icon-view default-zoom-level small
 
 # Modify dock icon size because the defaults are too large
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 24
-gsettings set org.gnome.shell.extensions.dash-to-dock background-color "#48b9c7"
+gsettings set org.gnome.shell.extensions.dash-to-dock background-color "#8BCEB6"
 
 # Add keybindings to minimize current window with Super + H
 gsettings set org.gnome.desktop.wm.keybindings minimize "['<Super>H']"
@@ -25,7 +25,7 @@ gsettings set org.gnome.shell.keybindings switch-to-application-8 "['<Super>8']"
 gsettings set org.gnome.shell.keybindings switch-to-application-9 "['<Super>9']"
 
 # Color theme
-gsettings set org.gnome.shell.extensions.pop-shell hint-color-rgba "rgba(72,185,199,1)"
+gsettings set org.gnome.shell.extensions.pop-shell hint-color-rgba "rgba(38,153,123,1)"
 
 # Include weekday in calendar
 gsettings set org.gnome.desktop.calendar show-weekdate true

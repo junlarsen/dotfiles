@@ -82,6 +82,7 @@ alias zshed="code $HOME/.zshrc"
 alias tf="terraform"
 
 alias gfmt="git diff --name-only -P | xargs npx prettier --write"
+alias glint="git diff --name-only -P | xargs npx eslint --fix"
 alias godspeed="sudo iwconfig wlp0s20f3 power off"
 
 alias gdp="git diff --patch"
@@ -104,6 +105,8 @@ esac
 # pnpm end
 
 export JAVA_HOME="/home/jun/.jdks/openjdk-20.0.1"
+
+export PATH="/home/jun/.local/bin:$PATH"
 
 # Dotty PATH exports. Always keep this at the bottom of the file
 export PATH="/home/jun/dotty/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"

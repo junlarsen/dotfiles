@@ -31,3 +31,6 @@ gsettings set org.gnome.shell.extensions.pop-shell active-hint-border-radius 12
 
 # Include weekday in calendar
 gsettings set org.gnome.desktop.calendar show-weekdate true
+
+# Set kitty as default terminal
+gsettings set org.gnome.desktop.default-applications.terminal exec kitty

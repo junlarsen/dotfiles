@@ -80,12 +80,17 @@ alias ged="code $HOME/.git-credentials"
 alias zshed="code $HOME/.zshrc"
 
 alias tf="terraform"
+alias dr="doppler run"
+alias drtf="doppler run terraform"
 
 alias gfmt="git diff --name-only -P | xargs npx prettier --write"
 alias glint="git diff --name-only -P | xargs npx eslint --fix"
 alias godspeed="sudo iwconfig wlp0s20f3 power off"
 
 alias gdp="git diff --patch"
+
+# Start peek only with ffmpeg backend
+alias peek="peek -b ffmpeg"
 
 export PATH="/home/jun/bin:$PATH"
 
@@ -104,7 +109,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-export JAVA_HOME="/home/jun/.jdks/openjdk-20.0.1"
+export JAVA_HOME="/home/jun/.jdks/openjdk-21.0.1"
 
 export PATH="/home/jun/.local/bin:$PATH"
 

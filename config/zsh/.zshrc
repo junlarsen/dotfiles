@@ -89,10 +89,17 @@ alias godspeed="sudo iwconfig wlp0s20f3 power off"
 
 alias gdp="git diff --patch"
 
+alias c="cargo"
+
 # Start peek only with ffmpeg backend
 alias peek="peek -b ffmpeg"
 
 export PATH="/home/jun/bin:$PATH"
+
+function s3del() {
+  aws s3 rm --recursive s3://$1
+  aws s3 rb s3://$1
+}
 
 # Install hooks to jump
 eval "$(jump shell --bind z)"

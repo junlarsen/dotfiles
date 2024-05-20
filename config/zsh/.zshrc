@@ -91,6 +91,17 @@ alias gdp="git diff --patch"
 
 alias c="cargo"
 
+function lde {
+  if [ $# -eq 0 ]; then
+    echo "Loading from ./.env"
+    export $(cat .env | xargs)
+    return
+  fi
+  echo "Loading from $1"
+  export $(cat $1 | xargs)
+}
+compdef _cat lde
+
 # Start peek only with ffmpeg backend
 alias peek="peek -b ffmpeg"
 

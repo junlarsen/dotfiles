@@ -101,9 +101,6 @@ function s3del() {
   aws s3 rb s3://$1
 }
 
-# Install hooks to jump
-eval "$(jump shell --bind z)"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -115,6 +112,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+eval "$(zoxide init zsh)"
 
 export JAVA_HOME="/home/jun/.jdks/openjdk-21.0.1"
 export PATH="/home/jun/.jdks/openjdk-21.0.1/bin:$PATH"

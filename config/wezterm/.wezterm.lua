@@ -2,6 +2,8 @@ local wezterm = require 'wezterm';
 local config = {}
 
 config.color_scheme = 'Gruvbox dark, hard (base16)'
+config.leader = { key = 'a', mods = 'CTRL' }
+config.font = wezterm.font 'JetBrains Mono'
 config.keys = {
   {
     key = 'LeftArrow',
@@ -22,6 +24,31 @@ config.keys = {
     key = 'n',
     mods = 'CTRL|SHIFT',
     action = wezterm.action.SplitHorizontal {domain = "CurrentPaneDomain"},
+  },
+  {
+    key = 'h',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.AdjustPaneSize {'Left', 2},
+  },
+  {
+    key = 'j',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.AdjustPaneSize {'Down', 2},
+  },
+  {
+    key = 'k',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.AdjustPaneSize {'Up', 2},
+  },
+  {
+    key = 'l',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.AdjustPaneSize {'Right', 2},
+  },
+  {
+    key = 'l',
+    mods = 'LEADER',
+    action = wezterm.action.ShowDebugOverlay,
   }
 }
 

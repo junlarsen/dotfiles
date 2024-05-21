@@ -49,7 +49,17 @@ config.keys = {
     key = 'l',
     mods = 'LEADER',
     action = wezterm.action.ShowDebugOverlay,
-  }
+  },
+  {
+    key = 'w',
+    mods = 'CTRL',
+    action = wezterm.action.CloseCurrentPane {confirm = true},
+  },
+  {
+    key = 'w',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.CloseCurrentPane {confirm = false},
+  },
 }
 
 for i = 1, 9 do

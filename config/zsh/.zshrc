@@ -102,6 +102,14 @@ function lde {
 }
 compdef _cat lde
 
+function awsuser {
+  if [ $# -eq 0 ]; then
+    echo "Usage: awsuser <profile>"
+    exit 1
+  fi
+  export AWS_PROFILE="$1"
+}
+
 # Start peek only with ffmpeg backend
 alias peek="peek -b ffmpeg"
 

@@ -107,6 +107,7 @@ function awsuser {
     echo "Usage: awsuser <profile>"
     exit 1
   fi
+  echo "Setting AWS_PROFILE=$1"
   export AWS_PROFILE="$1"
 }
 

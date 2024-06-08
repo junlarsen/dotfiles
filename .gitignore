@@ -9,3 +9,9 @@ config/aws/.aws/credentials
 # all the unpacked files.]
 *.tar.gz
 *.deb
+*.zip
+*.zst
+*.tar
+
+# Other files
+*.ttf

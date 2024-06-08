@@ -1,9 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="half-life"
+ZSH_THEME="cloud"
 ZSH_THEME_RANDOM_CANDIDATES=()
-
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -139,6 +138,8 @@ export JAVA_HOME="/home/jun/.jdks/openjdk-21.0.1"
 export PATH="/home/jun/.jdks/openjdk-21.0.1/bin:$PATH"
 
 export PATH="/home/jun/.local/bin:$PATH"
+
+eval "$(starship init zsh)"
 
 # Dotty PATH exports. Always keep this at the bottom of the file
 export PATH="/home/jun/dotty/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"

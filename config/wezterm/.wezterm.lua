@@ -1,9 +1,23 @@
 local wezterm = require 'wezterm';
 local config = {}
 
+config.window_frame = {
+  font = wezterm.font { family = 'Ubuntu', weight = 'Bold' },
+  font_size = 12.0,
+  active_titlebar_bg = '#282828',
+  inactive_titlebar_bg = '#282828',
+}
+
+config.colors = {
+  tab_bar = {
+    inactive_tab_edge = '#282828',
+  },
+}
+
+config.window_decorations = 'RESIZE'
 config.color_scheme = 'Gruvbox dark, hard (base16)'
 config.leader = { key = 'a', mods = 'CTRL' }
-config.font = wezterm.font 'JetBrains Mono'
+config.font = wezterm.font 'JetBrainsMonoNerdFont'
 config.keys = {
   {
     key = 'LeftArrow',

@@ -1,14 +1,14 @@
-# Dotfiles
+# ~/.dotfiles
 
-These are my dotfiles and most of my userspace software setup, likely to be 
-more useful to me than to you :)
+Linux userspace configuration and installers. Managed with a combination of
+GNU Stow and a concoction of shell scripts.
+
+I run Pop!_OS 22.04, doubt everything works on non-Ubuntu based distros.
 
 ## Setup
 
-This repository requires some default things installed on your machine 
-before you begin setup. Please install them otherwise you'll probably run 
-into a lot of crap. The shell scripts are kind of hacky and will probably 
-break without the proper dependencies.
+These things are required to get running. Scripts will probably break if you do
+not have all of these installed.
 
 - Bash, any version should probably work
 - Zsh as your user shell
@@ -16,16 +16,21 @@ break without the proper dependencies.
 - Stow, take a recent one to be safe
 - gnupg2
 
+```sh
+apt install zsh git stow gnupg2
+```
+
 ## Installing
 
-To link the dotfiles to your target directory, simply use Stow as usual. 
-Note that for dotty to keep track of where its installation is, please run 
-the bootstrap.sh script in the same directory as you cloned this repository in.
+Bootstrap the installation by running the `bootstrap.sh` script. This will
+tell dotty where it should expect to find the config files and installers.
+
+Each program has its own directory in the `config` directory. To link the
+config files in `config` to your `$HOME`, use `dotty-link` or if you dare,
+stow directly.
 
 ```sh
-# Let's install zsh dotfiles with dotty installation in ~/dotty
 stow zsh -Rvt ~ -d dotty
-# Or alternatively
 dotty-link zsh
 ```
 

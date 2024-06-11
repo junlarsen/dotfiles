@@ -72,6 +72,7 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 export PATH="$HOME/dotty/tools:$PATH"
+export PATH="$HOME/dotfiles/tools:$PATH"
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
@@ -146,3 +147,4 @@ export PATH="/home/jun/dotty/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3
 export PATH="/home/jun/dotty/packages/gradle/gradle-8.3/bin:$PATH"
 export PATH="/home/jun/dotty/packages/anki/anki-2.1.65-linux-qt6:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
+export PATH="/home/jun/dotfiles/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"

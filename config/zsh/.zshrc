@@ -61,6 +61,7 @@ HIST_STAMPS="%d-%m-%Y"
 plugins=(git docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.cargo/env
 
 # User configuration
 

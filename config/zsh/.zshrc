@@ -6,7 +6,7 @@ ZSH_THEME_RANDOM_CANDIDATES=()
 zstyle ':omz:update' mode reminder
 zstyle ':omz:update' frequency 13
 
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 

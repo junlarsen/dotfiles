@@ -27,7 +27,7 @@ HISTFILE=~/.zsh_history
 
 export PATH="$HOME/dotty/tools:$PATH"
 export PATH="$HOME/dotfiles/tools:$PATH"
-export EDITOR=idea
+export EDITOR=nano
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
@@ -45,6 +45,7 @@ alias godspeed="sudo iwconfig wlp0s20f3 power off"
 alias gdp="git diff --patch"
 
 alias c="cargo"
+alias p="pnpm"
 
 function lde {
   if [ $# -eq 0 ]; then

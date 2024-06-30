@@ -89,14 +89,15 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-eval "$(zoxide init zsh)"
 
 export JAVA_HOME="/home/jun/.jdks/openjdk-21.0.1"
 export PATH="/home/jun/.jdks/openjdk-21.0.1/bin:$PATH"
 
 export PATH="/home/jun/.local/bin:$PATH"
 
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+eval "$(just --completions zsh)"
 
 # Device specific settings
 alias laptopscrollfix="xinput --set-prop 10 331 1"

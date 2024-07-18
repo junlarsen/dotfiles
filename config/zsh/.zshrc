@@ -92,6 +92,7 @@ esac
 
 export JAVA_HOME="/home/jun/.jdks/openjdk-21.0.1"
 export PATH="/home/jun/.jdks/openjdk-21.0.1/bin:$PATH"
+export PATH="$HOME/.tfenv/bin:$PATH"
 
 export PATH="/home/jun/.local/bin:$PATH"
 

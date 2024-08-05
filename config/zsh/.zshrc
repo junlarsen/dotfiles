@@ -44,6 +44,8 @@ alias godspeed="sudo iwconfig wlp0s20f3 power off"
 
 alias gdp="git diff --patch"
 
+alias loc="cloc . --exclude-dir=.next,.open-next,node_modules,migrations,.turbo,build,dist,out,.terraform,pnpm-lock.yaml,target,.idea"
+
 alias c="cargo"
 alias p="pnpm"
 

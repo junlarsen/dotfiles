@@ -105,6 +105,8 @@ eval "$(just --completions zsh)"
 # Device specific settings
 alias laptopscrollfix="xinput --set-prop 10 331 1"
 
+alias today="date '+%Y-%m-%d'"
+
 # Dotty PATH exports. Always keep this at the bottom of the file
 export PATH="/home/jun/dotty/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"
 export PATH="/home/jun/dotty/packages/gradle/gradle-8.3/bin:$PATH"

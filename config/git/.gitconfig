@@ -2,8 +2,6 @@
 	name = Mats Larsen
 	email = mats@jun.codes
 	signingkey = 17C60B5359158F95
-[credential]
-	helper = store
 [gpg]
 	program = gpg2
 [commit]

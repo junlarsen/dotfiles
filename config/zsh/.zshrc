@@ -46,6 +46,8 @@ alias gdp="git diff --patch"
 
 alias loc="cloc . --exclude-dir=.next,.open-next,node_modules,migrations,.turbo,build,dist,out,.terraform,pnpm-lock.yaml,target,.idea"
 
+alias docker-compose="docker compose"
+
 alias c="cargo"
 alias p="pnpm"
 
@@ -110,6 +112,6 @@ alias today="date '+%Y-%m-%d'"
 # Dotty PATH exports. Always keep this at the bottom of the file
 export PATH="/home/jun/dotty/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"
 export PATH="/home/jun/dotty/packages/gradle/gradle-8.3/bin:$PATH"
-export PATH="/home/jun/dotty/packages/anki/anki-2.1.65-linux-qt6:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
 export PATH="/home/jun/dotfiles/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"
+export PATH="/home/jun/dotfiles/packages/anki/anki-24.06.3-linux-qt6:$PATH"

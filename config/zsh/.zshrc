@@ -49,6 +49,8 @@ alias loc="cloc . --exclude-dir=.next,.open-next,node_modules,migrations,.turbo,
 alias docker-compose="docker compose"
 
 alias c="cargo"
+alias cx="cargo xtask"
+alias cir="cargo insta review"
 alias p="pnpm"
 
 function lde {

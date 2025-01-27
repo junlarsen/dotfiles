@@ -25,22 +25,16 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-export PATH="$HOME/dotty/tools:$PATH"
 export PATH="$HOME/dotfiles/tools:$PATH"
 export EDITOR=nano
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
-alias ged="code $HOME/.git-credentials"
 alias zshed="code $HOME/.zshrc"
 
 alias tf="terraform"
 alias dr="doppler run"
 alias drtf="doppler run terraform"
-
-alias gfmt="git diff --name-only -P | xargs npx prettier --write"
-alias glint="git diff --name-only -P | xargs npx eslint --fix"
-alias godspeed="sudo iwconfig wlp0s20f3 power off"
 
 alias gdp="git diff --patch"
 
@@ -73,15 +67,7 @@ function awsuser {
   export AWS_PROFILE="$1"
 }
 
-# Start peek only with ffmpeg backend
-alias peek="peek -b ffmpeg"
-
 export PATH="/home/jun/bin:$PATH"
-
-function s3del() {
-  aws s3 rm --recursive s3://$1
-  aws s3 rb s3://$1
-}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -95,9 +81,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-
-export JAVA_HOME="/home/jun/.jdks/openjdk-21.0.1"
-export PATH="/home/jun/.jdks/openjdk-21.0.1/bin:$PATH"
 export PATH="$HOME/.tfenv/bin:$PATH"
 
 export PATH="/home/jun/.local/bin:$PATH"
@@ -111,12 +94,5 @@ alias laptopscrollfix="xinput --set-prop 10 331 1"
 
 alias today="date '+%Y-%m-%d'"
 
-# LLVM 15
-export PATH="/usr/lib/llvm-15/bin:$PATH"
-
 # Dotty PATH exports. Always keep this at the bottom of the file
-export PATH="/home/jun/dotty/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"
-export PATH="/home/jun/dotty/packages/gradle/gradle-8.3/bin:$PATH"
-export PATH="/usr/local/go/bin:$PATH"
 export PATH="/home/jun/dotfiles/packages/jetbrains-toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"
-export PATH="/home/jun/dotfiles/packages/anki/anki-24.06.3-linux-qt6:$PATH"

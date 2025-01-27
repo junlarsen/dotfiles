@@ -26,7 +26,7 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 export PATH="$HOME/dotfiles/tools:$PATH"
-export EDITOR=nano
+export EDITOR=hx
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"

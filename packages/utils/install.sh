@@ -8,3 +8,5 @@ cargo install --locked bat
 cargo install --locked hyperfine
 cargo install --locked hexyl
 cargo install --locked difftastic
+
+sudo apt install ninja-build ccache build-essential cmake

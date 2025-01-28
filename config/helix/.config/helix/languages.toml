@@ -1,0 +1,9 @@
+[[language]]
+name = "rust"
+formatter = { command = "rustfmt" }
+auto-format = true
+
+[language-server.rust-analyzer.config]
+checkOnSave = { command = "clippy", extraArgs = [] }
+cargo = { allFeatures = true }
+procMacro = { enable = true }

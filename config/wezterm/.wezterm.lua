@@ -65,12 +65,12 @@ config.keys = {
     action = wezterm.action.ShowDebugOverlay,
   },
   {
-    key = 'w',
+    key = 'q',
     mods = 'CTRL',
     action = wezterm.action.CloseCurrentPane {confirm = true},
   },
   {
-    key = 'w',
+    key = 'q',
     mods = 'CTRL|SHIFT',
     action = wezterm.action.CloseCurrentPane {confirm = false},
   },

@@ -30,7 +30,8 @@ export EDITOR=hx
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
-alias zshed="code $HOME/.zshrc"
+alias hxzsh="hx $HOME/.zshrc"
+alias hxd="hx ."
 
 alias tf="terraform"
 alias dr="doppler run"

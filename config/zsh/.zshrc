@@ -26,7 +26,10 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 export PATH="$HOME/dotfiles/tools:$PATH"
+
+# Helix Editor - this one is built from source
 export EDITOR=hx
+export HELIX_RUNTIME="$HOME/source/forks/helix/runtime"
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"

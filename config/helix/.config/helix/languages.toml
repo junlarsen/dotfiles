@@ -36,3 +36,11 @@ language-servers = [ { name = "typescript-language-server", except-features = [ 
 [[language]]
 name = "json"
 language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
+
+# Typst
+[language-server.tinymist]
+command = "tinymist"
+
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]

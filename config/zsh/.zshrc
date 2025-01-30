@@ -30,12 +30,14 @@ export PATH="$HOME/dotfiles/tools:$PATH"
 # Helix Editor - this one is built from source
 export EDITOR=hx
 export HELIX_RUNTIME="$HOME/source/forks/helix/runtime"
+source "$HOME/source/forks/helix/contrib/completion/hx.zsh"
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
 alias hxzsh="hx $HOME/.zshrc"
 alias hxd="hx ."
 
+alias gs="gss"
 alias tf="terraform"
 alias dr="doppler run"
 alias drtf="doppler run terraform"

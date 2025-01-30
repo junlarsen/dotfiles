@@ -3,5 +3,12 @@ theme = "monokai_pro_spectrum"
 [editor]
 line-number = "relative"
 
+[editor.soft-wrap]
+enable = true
+
+[editor.auto-save]
+after-delay.enable = true
+after-delay.timeout = 500
+
 [editor.file-picker]
 hidden = false

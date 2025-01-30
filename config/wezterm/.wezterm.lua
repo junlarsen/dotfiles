@@ -74,6 +74,11 @@ config.keys = {
     mods = 'CTRL|SHIFT',
     action = wezterm.action.CloseCurrentPane {confirm = false},
   },
+  {
+    key = '`',
+    mods = 'CTRL',
+    action = wezterm.action.SendString('fg\n'),
+  }
 }
 
 for i = 1, 9 do

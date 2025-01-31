@@ -30,7 +30,7 @@ install_jetbrains_toolbox() {
   dotfiles_log "Installing JetBrains Toolbox"
   sudo apt-get install libfuse2
   mkdir -p "$TARGET/toolbox"
-  curl 'https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-1.27.3.14493.tar.gz' --compressed -LO "$TARGET/toolbox/jetbrains-toolbox.tar.gz"
+  curl 'https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-1.27.3.14493.tar.gz' --compressed -Lo "$TARGET/toolbox/jetbrains-toolbox.tar.gz"
   tar -xzf "$TARGET/toolbox/jetbrains-toolbox.tar.gz" -C "$TARGET/toolbox"
 }
 

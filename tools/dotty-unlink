@@ -1,9 +1,0 @@
-#!/usr/bin/bash
-
-if [[ $# -eq 0 ]]; then
-  echo "usage: dotty-unlink <dotfile-package>"
-  exit 1
-fi
-
-DOTTY_HOME="$HOME/dotfiles"
-stow -Dvt ~ "$1" -d "$DOTTY_HOME/config"

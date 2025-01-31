@@ -1,0 +1,76 @@
+#!/usr/bin/env zsh
+
+DOTFILES_USAGE=$(cat <<DOC
+Usage: dotfiles [OPTIONS] <COMMAND>
+
+Arguments:
+  <COMMAND>  The command to use, either 'get', 'link', or 'unlink'
+
+Commands:
+  get <package>              Download and install a package
+  link <config>              Symlink a config directory to $HOME
+  unlink <config>            Unlink a config directory from $HOME
+
+Options:
+  --help                     Print this help text
+DOC
+)
+
+if [[ $# -eq 0 ]]; then
+  echo "$DOTFILES_USAGE"
+  exit 1
+fi
+
+dotfiles_log() {
+  printf "\e[94m[dotfiles]($(date)): %s\n\e[0m" "$1"
+}
+
+# Common variables the installers may want to use.
+export DOTFILES_HOME="$HOME/dotfiles"
+export TARGET="$DOTFILES_HOME/target"
+
+# Target holds all trash files that are downloaded during installation.
+mkdir -p "$TARGET"
+
+case "$1" in
+  "get")
+    if [[ $# -eq 1 ]]; then
+      dotfiles_log "Missing argument <package> for 'dotfiles get'"
+      exit 1
+    fi
+    # Check that the package directory actually exists
+    if [[ ! -d "$DOTFILES_HOME/packages/$2" || ! -f "$DOTFILES_HOME/packages/$2/install.zsh" ]]; then
+      dotfiles_log "Package '$2' does not exist or is missing install.zsh script"
+      exit 1
+    fi
+    dotfiles_log "Downloading package $2 from $DOTFILES_HOME/packages/$2/install.zsh"
+    pushd "$DOTFILES_HOME/packages/$2" || exit
+    source ./install.zsh
+    popd || exit
+    dotfiles_log "Package $2 successfully installed"
+    ;;
+  "link")
+    if [[ $# -eq 1 ]]; then
+      ecdotfiles_logho "Missing argument <config> for 'dotfiles link'"
+      exit 1
+    fi
+    stow -Svt ~ "$2" -d "$DOTFILES_HOME/config" --adopt
+    ;;
+  "unlink")
+    if [[ $# -eq 1 ]]; then
+      dotfiles_log "Missing argument <config> for 'dotfiles unlink'"
+      exit 1
+    fi
+    stow -Dvt ~ "$2" -d "$DOTFILES_HOME/config"
+    ;;
+  "--help")
+    echo "$DOTFILES_USAGE"
+    exit 1
+    ;;
+esac
+
+
+if [[ $# -eq 0 ]]; then
+  echo "usage: dotty-link <dotfile-package>"
+  exit 1
+fi

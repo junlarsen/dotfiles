@@ -11,6 +11,11 @@ bufferline = "always"
 [editor.soft-wrap]
 enable = true
 
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+center= ["version-control"]
+right = ["diagnostics", "workspace-diagnostics", "selections", "register", "position", "total-line-numbers", "file-encoding"]
+
 [editor.auto-save]
 after-delay.enable = true
 after-delay.timeout = 500

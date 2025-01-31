@@ -5,5 +5,5 @@ if [[ $# -eq 0 ]]; then
   exit 1
 fi
 
-DOTTY_HOME=$(cat ~/.dotty_installation)
+DOTTY_HOME="$HOME/dotfiles"
 stow -Dvt ~ "$1" -d "$DOTTY_HOME/config"

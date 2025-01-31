@@ -5,6 +5,9 @@
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
+# Management command line tool
+export PATH="$HOME/dotfiles/bin:$PATH"
+
 # Terraform Version Manager
 export PATH="$HOME/source/forks/tfenv/bin/:$PATH"
 

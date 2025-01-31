@@ -10,5 +10,9 @@ enable = true
 after-delay.enable = true
 after-delay.timeout = 500
 
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "hint"
+
 [editor.file-picker]
 hidden = false

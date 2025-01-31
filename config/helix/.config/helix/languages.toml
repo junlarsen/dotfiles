@@ -3,6 +3,7 @@
 name = "rust"
 formatter = { command = "rustfmt" }
 auto-format = true
+rulers = [100]
 
 [language-server.rust-analyzer.config]
 checkOnSave = { command = "clippy", extraArgs = [] }
@@ -44,3 +45,4 @@ command = "tinymist"
 [[language]]
 name = "typst"
 language-servers = ["tinymist"]
+rulers = [80]

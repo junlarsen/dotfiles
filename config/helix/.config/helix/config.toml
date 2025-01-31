@@ -2,6 +2,10 @@ theme = "monokai_pro_spectrum"
 
 [editor]
 line-number = "relative"
+scroll-lines = 7
+completion-timeout = 5
+completion-replace = true
+bufferline = "always"
 
 [editor.soft-wrap]
 enable = true

@@ -35,8 +35,14 @@ install_git() {
   sudo apt install git
 }
 
+install_gnupg() {
+  dotfiles_log "Installing GnuPG"
+  sudo apt install gnupg2
+}
+
 install_starship
 install_zoxide
 install_omz
 install_jetbrains_mono_nerdfont
 install_git
+install_gnupg

@@ -1,59 +1,65 @@
-# ~/.dotfiles
+# dotfiles
 
-Linux userspace configuration and installers. Managed with a combination of
-GNU Stow and a concoction of shell scripts.
+Linux userspace configuration and program installers. Managed with Git and GNU
+Stow as the symlink farm manager.
 
-I run Pop!_OS 22.04, doubt everything works on non-Ubuntu based distros.
+I run Pop!_OS 24.04, things probably won't work on non-Debian systems.
 
 ## Setup
 
-These things are required to get running. Scripts will probably break if you do
-not have all of these installed.
+These are essential dependencies for the setup to work.
 
-- Bash, any version should probably work
-- Zsh as your user shell
-- Git, grab something newer than what's on 22.04's default
-- Stow, take a recent one to be safe
-- gnupg2
+- Zsh, preferably configured as your user shell
+- Git, default is fine, we will install a newer one anyways.
+- Stow, default is fine.
 
-```sh
-apt install zsh git stow gnupg2
+You can get the base dependencies with this:
+
+```bash
+sudo apt install zsh git stow
+chsh -s $(which zsh)
+# You don't need zsh as user shell to run the scripts.
 ```
 
-## Installing
+## Usage
 
-Bootstrap the installation by running the `bootstrap.sh` script. This will
-tell dotty where it should expect to find the config files and installers.
+The repository assumes that it is cloned into `~/dotfiles`. It will not work
+otherwise.
 
-Each program has its own directory in the `config` directory. To link the
-config files in `config` to your `$HOME`, use `dotty-link` or if you dare,
-stow directly.
+```bash
+Usage: dotfiles [OPTIONS] <COMMAND>
 
-```sh
-stow zsh -Rvt ~ -d dotty
-dotty-link zsh
+Arguments:
+  <COMMAND>  The command to use, either 'get', 'link', or 'unlink'
+
+Commands:
+  get <package>              Download and install a package
+  link <config>              Symlink a config directory to /home/jun
+  unlink <config>            Unlink a config directory from /home/jun
+
+Options:
+  --help                     Print this help text
 ```
 
-To extract and install any of the packages, use the install script. This 
-will execute the install.sh script for the corresponding package.
+For example, to install Helix Editor and related language servers, run:
 
-```sh
-./install.zsh discord
-# Or alternatively
-dotty-install discord
+```bash
+dotfiles get helix
+```
+
+To symlink the Helix config to $HOME, run:
+
+```bash
+dotfiles link helix
 ```
 
 ## File structure
 
 The dotfiles are organized into four distinct categories:
 
-- config: the actual dotfiles, split by program which are all merged into ~ by
-  stow.
-- scripts: system-wide scripts that are expected to be ran only once, such as
-  configuring gnome keybindings, changing input method framework, etc.
-- tools: executable scripts added to path, mostly dotty-specific stuff
-- packages: installation scripts for various programs such as Anki, Chrome,
-  VSCode, etc that are single-command installable with `dotty-install`.
+- config: the actual dotfiles, split by program which are all merged into ~
+- scripts: system-wide scripts that do various things like setting input method
+- bundles: installation scripts for various programs such as Anki, Chrome, etc.
 
 ## License
 

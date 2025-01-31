@@ -40,6 +40,11 @@ install_gnupg() {
   sudo apt install gnupg2
 }
 
+install_zsh_syntax() {
+  dotfiles_log "Installing zsh syntax highlighting"
+  sudo apt install zsh-syntax-highlighting
+}
+
 install_starship
 install_zoxide
 install_omz

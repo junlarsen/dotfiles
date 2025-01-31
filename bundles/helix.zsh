@@ -2,6 +2,7 @@
 
 install_helix() {
   dotfiles_log "Installing Helix Editor"
+  sudo apt install wl-clipboard
   git clone https://github.com/junlarsen/helix "$HOME/source/forks/helix"
   pushd "$HOME/source/forks/helix"
   cargo install --path helix-term --locked

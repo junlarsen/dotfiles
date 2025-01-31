@@ -18,7 +18,7 @@ fi
 echo "Installing package '$1'..."
 
 pushd "$DOTTY_HOME/packages/$1" || exit
-source ./install.sh
+source ./install.zsh
 popd || exit
 
 echo "Install complete"

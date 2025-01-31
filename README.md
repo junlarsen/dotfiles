@@ -38,7 +38,7 @@ To extract and install any of the packages, use the install script. This
 will execute the install.sh script for the corresponding package.
 
 ```sh
-./install.sh discord
+./install.zsh discord
 # Or alternatively
 dotty-install discord
 ```

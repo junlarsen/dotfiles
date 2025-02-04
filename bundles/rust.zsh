@@ -5,4 +5,17 @@ install_rustup() {
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 }
 
-install_rustup
+dotfiles_install() {
+  if [[ $# -eq 0 ]]; then
+    dotfiles_log "Zero packages were requested. Exiting..."
+    exit 1
+  fi
+
+  for p in "$@"
+  do
+    case $p in
+      "rustup") install_rustup ;;
+      *) dotfiles_log "Requested unknown package $p..." ;;
+    esac
+  done
+}

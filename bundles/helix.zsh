@@ -36,9 +36,22 @@ install_typst_lsp() {
   cargo install --git https://github.com/Myriad-Dreamin/tinymist --locked tinymist
 }
 
-install_helix
-install_terraform_lsp
-install_biome_lsp
-install_typescript_lsp
-install_cxx_lsp
-install_typst_lsp
+dotfiles_install() {
+  if [[ $# -eq 0 ]]; then
+    dotfiles_log "Zero packages were requested. Exiting..."
+    exit 1
+  fi
+
+  for p in "$@"
+  do
+    case $p in
+      "helix") install_helix ;;
+      "terraform-lsp") install_terraform_lsp ;;  
+      "biome-lsp") install_biome_lsp ;;
+      "typescript-lsp") install_typescript_lsp ;;
+      "cxx-lsp") install_cxx_lsp ;;
+      "typst-lsp") install_typst_lsp ;;
+      *) dotfiles_log "Requested unknown package $p..." ;;
+    esac
+  done
+}

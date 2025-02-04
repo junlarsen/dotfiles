@@ -46,6 +46,7 @@ case "$1" in
     dotfiles_log "Downloading package $2 from $DOTFILES_HOME/bundles/$2.zsh"
     pushd "$DOTFILES_HOME/bundles" || exit
     source "./$2.zsh"
+    dotfiles_install "${@:3}"
     popd || exit
     dotfiles_log "Package $2 successfully installed"
     ;;

@@ -12,9 +12,17 @@ EOF
   cp -r /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/fcitx.desktop
 }
 
-install_mozc() {
-  dotfiles_log "Installing mozc"
-  
-}
+dotfiles_install() {
+  if [[ $# -eq 0 ]]; then
+    dotfiles_log "Zero packages were requested. Exiting..."
+    exit 1
+  fi
 
-install_fcitx5
+  for p in "$@"
+  do
+    case $p in
+      "fcitx5") install_fcitx5;;
+      *) dotfiles_log "Requested unknown package $p..." ;;
+    esac
+  done
+}

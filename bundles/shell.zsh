@@ -45,9 +45,22 @@ install_zsh_syntax() {
   sudo apt install zsh-syntax-highlighting
 }
 
-install_starship
-install_zoxide
-install_omz
-install_jetbrains_mono_nerdfont
-install_git
-install_gnupg
+dotfiles_install() {
+  if [[ $# -eq 0 ]]; then
+    dotfiles_log "Zero packages were requested. Exiting..."
+    exit 1
+  fi
+
+  for p in "$@"
+  do
+    case $p in
+      "starship") install_starship ;;
+      "zoxide") install_discord ;;
+      "omz") install_omz ;;
+      "jetbrains-mono") install_jetbrains_mono_nerdfont ;;
+      "git") install_git ;;
+      "gnupg") install_gnupg ;;
+      *) dotfiles_log "Requested unknown package $p..." ;;
+    esac
+  done
+}

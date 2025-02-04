@@ -46,9 +46,22 @@ install_graphite() {
   pnpm add -g @withgraphite/graphite-cli@stable
 }
 
-install_aws_cli
-install_docker
-install_packer
-install_tfenv
-install_doppler
-install_graphite
+dotfiles_install() {
+  if [[ $# -eq 0 ]]; then
+    dotfiles_log "Zero packages were requested. Exiting..."
+    exit 1
+  fi
+
+  for p in "$@"
+  do
+    case $p in
+      "aws") install_aws_cli ;;
+      "docker") install_docker ;;
+      "packer") install_packer ;;
+      "tfenv") install_tfenv ;;
+      "doppler") install_doppler ;;
+      "graphite") install_graphite ;;
+      *) dotfiles_log "Requested unknown package $p..." ;;
+    esac
+  done
+}

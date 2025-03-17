@@ -36,6 +36,11 @@ install_tfenv() {
   git clone --depth=1 https://github.com/junlarsen/tfenv ~/source/forks/tfenv
 }
 
+install_tflint() {
+  dotfiles_log "Installing tflint"
+  curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+}
+
 install_doppler() {
   dotfiles_log "Install Doppler"
   (curl -Ls --tlsv1.2 --proto "=https" --retry 3 https://cli.doppler.com/install.sh || wget -t 3 -qO- https://cli.doppler.com/install.sh) | sudo sh
@@ -59,6 +64,7 @@ dotfiles_install() {
       "docker") install_docker ;;
       "packer") install_packer ;;
       "tfenv") install_tfenv ;;
+      "tflint") install_tflint ;;
       "doppler") install_doppler ;;
       "graphite") install_graphite ;;
       *) dotfiles_log "Requested unknown package $p..." ;;

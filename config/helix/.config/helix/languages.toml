@@ -10,9 +10,23 @@ checkOnSave = { command = "clippy", extraArgs = [] }
 cargo = { allFeatures = true }
 procMacro = { enable = true }
 
+# Terraform / tflint
+[language-server.tflint]
+command = "tflint"
+args = ["--langserver"]
+
+[[language]]
+name = "hcl"
+language-servers = [
+  { name = "tflint" },
+  { name = "terraform-ls" },
+]
+formatter = { command = "terraform", args = ["fmt"] }
+
 # Biome / TypeScript
-[language-server]
-biome = { command = "biome", args = ["lsp-proxy"] }
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
 
 [[language]]
 name = "javascript"

@@ -41,6 +41,12 @@ install_tflint() {
   curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
 }
 
+install_terragrunt() {
+  dotfiles_log "Installing terragrunt"
+  curl https://github.com/gruntwork-io/terragrunt/releases/download/v0.76.0/terragrunt_linux_amd64 -Lo ~/bin/terragrunt
+  chmod +x ~/bin/terragrunt
+}
+
 install_doppler() {
   dotfiles_log "Install Doppler"
   (curl -Ls --tlsv1.2 --proto "=https" --retry 3 https://cli.doppler.com/install.sh || wget -t 3 -qO- https://cli.doppler.com/install.sh) | sudo sh
@@ -65,6 +71,7 @@ dotfiles_install() {
       "packer") install_packer ;;
       "tfenv") install_tfenv ;;
       "tflint") install_tflint ;;
+      "terragrunt") install_terragrunt ;;
       "doppler") install_doppler ;;
       "graphite") install_graphite ;;
       *) dotfiles_log "Requested unknown package $p..." ;;

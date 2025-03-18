@@ -34,8 +34,10 @@ alias hxd="hx ."
 
 alias gs="gss"
 alias tf="terraform"
+alias tg="terragrunt"
 alias dr="doppler run"
 alias drtf="doppler run -- terraform"
+alias drtg="doppler run -- terragrunt"
 
 alias gdp="git diff --patch"
 

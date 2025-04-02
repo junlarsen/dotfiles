@@ -41,6 +41,13 @@ alias drtg="doppler run -- terragrunt"
 
 alias gdp="git diff --patch"
 
+alias yarn="corepack yarn"
+alias yarnpkg="corepack yarnpkg"
+alias pnpm="corepack pnpm"
+alias pnpx="corepack pnpx"
+alias npm="corepack npm"
+alias npx="corepack npx"
+
 alias c="cargo"
 alias cx="cargo xtask"
 alias cir="cargo insta review"

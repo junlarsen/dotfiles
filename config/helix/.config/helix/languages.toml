@@ -21,7 +21,7 @@ language-servers = [
   { name = "tflint" },
   { name = "terraform-ls" },
 ]
-formatter = { command = "terraform", args = ["fmt"] }
+# formatter = { command = "terraform", args = ["fmt"] }
 
 # Biome / TypeScript
 [language-server.biome]

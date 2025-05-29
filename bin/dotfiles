@@ -33,7 +33,6 @@ mkdir -p "$TARGET"
 
 case "$1" in
   "link")
-    mkdir -p "$HOME/zsh-runtime"
     if [[ $# -eq 1 ]]; then
       ecdotfiles_logho "Missing argument <config> for 'dotfiles link'"
       exit 1
@@ -41,7 +40,6 @@ case "$1" in
     stow -Svt ~ "$2" -d "$DOTFILES_HOME/config" --adopt
     ;;
   "unlink")
-    mkdir -p "$HOME/zsh-runtime"
     if [[ $# -eq 1 ]]; then
       dotfiles_log "Missing argument <config> for 'dotfiles unlink'"
       exit 1

@@ -3,7 +3,11 @@
 Linux userspace configuration and program installers. Managed with Git and GNU
 Stow as the symlink farm manager.
 
-I run Pop!_OS 24.04, things probably won't work on non-Debian systems.
+I run Arch with COSMIC DE, but the `dotfiles` linking script is also tested to
+work on Debian-based distributions (ubuntu/pop).
+
+> There used to be a `dotfiles get` script, but this has mostly been replaced
+> by the AUR for me.
 
 ## Setup
 
@@ -33,18 +37,11 @@ Arguments:
   <COMMAND>  The command to use, either 'get', 'link', or 'unlink'
 
 Commands:
-  get <package>              Download and install a package
   link <config>              Symlink a config directory to /home/jun
   unlink <config>            Unlink a config directory from /home/jun
 
 Options:
   --help                     Print this help text
-```
-
-For example, to install Helix Editor and related language servers, run:
-
-```bash
-dotfiles get helix
 ```
 
 To symlink the Helix config to $HOME, run:

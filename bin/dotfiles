@@ -7,7 +7,6 @@ Arguments:
   <COMMAND>  The command to use, either 'get', 'link', or 'unlink'
 
 Commands:
-  get <package>              Download and install a package
   link <config>              Symlink a config directory to $HOME
   unlink <config>            Unlink a config directory from $HOME
 
@@ -33,23 +32,6 @@ export TARGET="$DOTFILES_HOME/target"
 mkdir -p "$TARGET"
 
 case "$1" in
-  "get")
-    if [[ $# -eq 1 ]]; then
-      dotfiles_log "Missing argument <package> for 'dotfiles get'"
-      exit 1
-    fi
-    # Check that the package directory actually exists
-    if [[ ! -f "$DOTFILES_HOME/bundles/$2.zsh" ]]; then
-      dotfiles_log "Package '$2' does not exist"
-      exit 1
-    fi
-    dotfiles_log "Downloading package $2 from $DOTFILES_HOME/bundles/$2.zsh"
-    pushd "$DOTFILES_HOME/bundles" || exit
-    source "./$2.zsh"
-    dotfiles_install "${@:3}"
-    popd || exit
-    dotfiles_log "Package $2 successfully installed"
-    ;;
   "link")
     mkdir -p "$HOME/zsh-runtime"
     if [[ $# -eq 1 ]]; then

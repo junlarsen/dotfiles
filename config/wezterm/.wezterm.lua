@@ -15,7 +15,9 @@ config.colors = {
 }
 
 config.window_decorations = 'RESIZE'
-config.color_scheme = 'Gruvbox dark, hard (base16)'
+config.color_scheme = 'Tokyo Night'
+config.window_background_opacity = 0.8
+config.text_background_opacity = 0.8
 config.leader = { key = 'a', mods = 'CTRL' }
 config.font = wezterm.font 'JetBrainsMonoNerdFont'
 config.keys = {

@@ -1,4 +1,5 @@
-theme = "monokai_pro_spectrum"
+theme = "tokyonight"
+# theme = "monokai_pro_spectrum"
 
 [editor]
 line-number = "relative"

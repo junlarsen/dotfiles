@@ -42,24 +42,44 @@ config.keys = {
     action = wezterm.action.SplitHorizontal {domain = "CurrentPaneDomain"},
   },
   {
-    key = 'h',
+    key = 'LeftArrow',
     mods = 'CTRL|SHIFT',
     action = wezterm.action.AdjustPaneSize {'Left', 2},
   },
   {
-    key = 'j',
+    key = 'UpArrow',
     mods = 'CTRL|SHIFT',
     action = wezterm.action.AdjustPaneSize {'Down', 2},
   },
   {
-    key = 'k',
+    key = 'DownArrow',
     mods = 'CTRL|SHIFT',
     action = wezterm.action.AdjustPaneSize {'Up', 2},
   },
   {
-    key = 'l',
+    key = 'RightArrow',
     mods = 'CTRL|SHIFT',
     action = wezterm.action.AdjustPaneSize {'Right', 2},
+  },
+  {
+    key = 'h',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.ActivatePaneDirection 'Left',
+  },
+  {
+    key = 'j',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.ActivatePaneDirection 'Down',
+  },
+  {
+    key = 'k',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.ActivatePaneDirection 'Up',
+  },
+  {
+    key = 'l',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.ActivatePaneDirection 'Right',
   },
   {
     key = 'l',

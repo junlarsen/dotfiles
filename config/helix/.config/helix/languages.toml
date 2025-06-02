@@ -1,7 +1,6 @@
 # Rust & Rust Analzyer
 [[language]]
 name = "rust"
-formatter = { command = "rustfmt" }
 auto-format = true
 rulers = [100]
 
@@ -9,6 +8,7 @@ rulers = [100]
 checkOnSave = { command = "clippy", extraArgs = [] }
 cargo = { allFeatures = true }
 procMacro = { enable = true }
+assist = { importPrefix = "by_crate" }
 
 # Terraform / tflint
 [language-server.tflint]

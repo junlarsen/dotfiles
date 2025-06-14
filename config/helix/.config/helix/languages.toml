@@ -5,10 +5,9 @@ auto-format = true
 rulers = [100]
 
 [language-server.rust-analyzer.config]
-checkOnSave = { command = "clippy", extraArgs = [] }
 cargo = { allFeatures = true }
 procMacro = { enable = true }
-assist = { importPrefix = "by_crate" }
+imports = { granularity.group = "item", prefix = "by_crate" }
 
 # Terraform / tflint
 [language-server.tflint]
@@ -21,7 +20,6 @@ language-servers = [
   { name = "tflint" },
   { name = "terraform-ls" },
 ]
-# formatter = { command = "terraform", args = ["fmt"] }
 
 # Biome / TypeScript
 [language-server.biome]
@@ -55,8 +53,11 @@ language-servers = [ { name = "vscode-json-language-server", except-features = [
 # Typst
 [language-server.tinymist]
 command = "tinymist"
+config = { formatterMode = "typstyle" }
 
 [[language]]
 name = "typst"
 language-servers = ["tinymist"]
 rulers = [80]
+formatter = { command = "typstyle" }
+auto-format = true

@@ -61,3 +61,7 @@ language-servers = ["tinymist"]
 rulers = [80]
 formatter = { command = "typstyle" }
 auto-format = true
+
+[[language]]
+name = "markdown"
+rulers = [80]

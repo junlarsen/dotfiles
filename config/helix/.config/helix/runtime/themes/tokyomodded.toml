@@ -2,3 +2,6 @@ inherits = "tokyonight"
 "ui.background" = { }
 "ui.linenr" = { fg = "fg-linenr" }
 "ui.linenr.selected" = { fg = "teal" }
+
+# This is a comment that now has a new color
+comment = "#7f87af"

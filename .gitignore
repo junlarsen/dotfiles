@@ -1,7 +1,16 @@
 .idea
 
+# Do not share private credentials
 config/git/.git-credentials
 config/aws/.aws/credentials
 config/aws/.aws/config
+
+# Do not share or track known hosts or saved hosts
+config/ssh/.ssh/known_hosts*
+config/ssh/.ssh/config
+
+# Do not pollute fcitx5 autostart
+config/fcitx5/.config/autostart
+!config/fcitx5/.config/autostart/fcitx5.desktop
 
 target

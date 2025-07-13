@@ -3,11 +3,7 @@
 Linux userspace configuration and program installers. Managed with Git and GNU
 Stow as the symlink farm manager.
 
-I run Arch with COSMIC DE, but the `dotfiles` linking script is also tested to
-work on Debian-based distributions (ubuntu/pop).
-
-> There used to be a `dotfiles get` script, but this has mostly been replaced
-> by the AUR for me.
+Currently, the dotfiles are configured on an Arch + COSMIC environment.
 
 ## Setup
 
@@ -34,7 +30,7 @@ otherwise.
 Usage: dotfiles [OPTIONS] <COMMAND>
 
 Arguments:
-  <COMMAND>  The command to use, either 'get', 'link', or 'unlink'
+  <COMMAND>  The command to use, either 'link', or 'unlink'
 
 Commands:
   link <config>              Symlink a config directory to /home/jun
@@ -55,8 +51,7 @@ dotfiles link helix
 The dotfiles are organized into four distinct categories:
 
 - config: the actual dotfiles, split by program which are all merged into ~
-- scripts: system-wide scripts that do various things like setting input method
-- bundles: installation scripts for various programs such as Anki, Chrome, etc.
+- bin: the dotfiles linking script
 
 ## License
 

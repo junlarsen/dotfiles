@@ -27,10 +27,14 @@ for file in $HOME/.config/zsh-addons/*.zsh; do
     source "$file"
 done
 
+export EDITOR="nvim"
+export VISUAL="nvim"
+
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
 alias hxzsh="hx $HOME/.zshrc"
 alias hxd="hx ."
+alias nvd="nvim ."
 
 alias gs="gss"
 alias tf="terraform"
@@ -75,3 +79,5 @@ function awsuser {
 
 alias laptopscrollfix="xinput --set-prop 10 331 1"
 alias today="date '+%Y-%m-%d'"
+
+alias nv="nvim"

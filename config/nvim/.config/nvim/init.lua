@@ -672,6 +672,7 @@ require('lazy').setup({
         tflint = {},
         biome = {},
         terraformls = {},
+        pyright = {},
         ts_ls = {},
         tinymist = {},
         rust_analyzer = {},

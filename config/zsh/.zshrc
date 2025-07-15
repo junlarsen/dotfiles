@@ -32,8 +32,6 @@ export VISUAL="nvim"
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
-alias hxzsh="hx $HOME/.zshrc"
-alias hxd="hx ."
 alias nvd="nvim ."
 
 alias gs="gss"
@@ -56,6 +54,8 @@ alias c="cargo"
 alias cx="cargo xtask"
 alias cir="cargo insta review"
 alias p="pnpm"
+
+alias murder="pkill -9"
 
 function lde {
   if [ $# -eq 0 ]; then

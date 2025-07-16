@@ -1,9 +1,10 @@
 [user]
 	name = Mats Jun Larsen
 	email = mats@jun.codes
-	signingkey = 17C60B5359158F95
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKJpRZoO8nAk/Xarpdi19rtXfBhiKBb4ujl6Ku18fACh
 [gpg]
 	program = gpg2
+	format = ssh
 [commit]
 	gpgsign = true
 [core]
@@ -25,3 +26,5 @@
 	required = true
 [rerere]
 	enabled = true
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign

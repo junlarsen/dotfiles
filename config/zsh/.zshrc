@@ -27,12 +27,14 @@ for file in $HOME/.config/zsh-addons/*.zsh; do
     source "$file"
 done
 
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="helix"
+export VISUAL="helix"
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
 alias nvd="nvim ."
+alias hx="helix"
+alias hxd="helix ."
 
 alias gs="gss"
 alias tf="terraform"

@@ -14,6 +14,10 @@ imports = { granularity.group = "item", prefix = "by_crate" }
 command = "tflint"
 args = ["--langserver"]
 
+[language-server.terraform-ls]
+command = "terraform-ls"
+args = ["serve"]
+
 [[language]]
 name = "hcl"
 language-servers = [

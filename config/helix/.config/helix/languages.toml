@@ -9,11 +9,6 @@ cargo = { allFeatures = true }
 procMacro = { enable = true }
 imports = { granularity.group = "item", prefix = "by_crate" }
 
-# Terraform / tflint
-[language-server.tflint]
-command = "tflint"
-args = ["--langserver"]
-
 [language-server.terraform-ls]
 command = "terraform-ls"
 args = ["serve"]
@@ -21,7 +16,6 @@ args = ["serve"]
 [[language]]
 name = "hcl"
 language-servers = [
-  { name = "tflint" },
   { name = "terraform-ls" },
 ]
 

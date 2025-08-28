@@ -8,6 +8,8 @@ config/aws/.aws/config
 # Do not share or track known hosts or saved hosts
 config/ssh/.ssh/known_hosts*
 config/ssh/.ssh/config
+# Do not share any keys
+config/ssh/.ssh/id*
 
 # Do not pollute fcitx5 autostart
 config/fcitx5/.config/autostart

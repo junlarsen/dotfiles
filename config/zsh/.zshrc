@@ -35,6 +35,7 @@ alias rrr="source $HOME/.zshrc"
 alias nvd="nvim ."
 alias hx="helix"
 alias hxd="helix ."
+alias h="helix ."
 
 alias gs="gss"
 alias tf="terraform"

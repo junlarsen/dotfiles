@@ -27,15 +27,26 @@ for file in $HOME/.config/zsh-addons/*.zsh; do
     source "$file"
 done
 
-export EDITOR="helix"
-export VISUAL="helix"
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  export EDITOR="hx"
+  export VISUAL="hx"
+else
+  export EDITOR="helix"
+  export VISUAL="helix"
+fi
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
 alias nvd="nvim ."
-alias hx="helix"
-alias hxd="helix ."
-alias h="helix ."
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  alias hxd="hx ."
+  alias h="hx ."
+else
+  alias hx="helix"
+  alias hxd="helix ."
+  alias h="helix ."
+fi
 
 alias gs="gss"
 alias tf="terraform"

@@ -21,6 +21,16 @@ chsh -s $(which zsh)
 # You don't need zsh as user shell to run the scripts.
 ```
 
+## Setup on MacOS
+
+1. Install Stow, probably through Brew
+2. Manually install oh-my-zsh from GitHub
+3. Manually install zsh-syntax-highlighting from Brew (brew install zsh-syntax-highlighting)
+4. Install zoxide and starship from Brew
+5. Download JetBrains Mono Nerd Font from https://www.nerdfonts.com/font-downloads
+6. Install Wezterm through Brew cask https://wezterm.org/install/macos.html#installing-on-macos
+7. Switch to the MacOS branch in the GitHub repository and link all dependency configs you want.
+
 ## Usage
 
 The repository assumes that it is cloned into `~/dotfiles`. It will not work

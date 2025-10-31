@@ -72,6 +72,7 @@ alias c="cargo"
 alias cx="cargo xtask"
 alias cir="cargo insta review"
 alias p="pnpm"
+alias y="yarn"
 
 alias murder="pkill -9"
 

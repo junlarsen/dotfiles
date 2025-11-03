@@ -80,9 +80,5 @@ args = ["--stdio"]
 
 [[language]]
 name = "css"
-language-servers = [ "vsc-css", "biome" ]
+language-servers = [ { name = "vscode-css-language-server", except-features = ["format"] }, "biome" ]
 auto-format = true
-
-[language-server.vsc-css]
-command = "vscode-css-language-server"
-args = ["--stdio"]

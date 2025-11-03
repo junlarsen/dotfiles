@@ -68,7 +68,7 @@ rulers = [80]
 name = "python"
 auto-format = true
 language-servers = [ { name = "ruff" }, { name = "ty" }]
-formatter = { command = "ruff", args = ["-"] }
+formatter = { command = "ruff", args = ["format", "-"] }
 
 [language-server.ty]
 command = "ty"

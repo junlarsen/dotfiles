@@ -67,9 +67,22 @@ rulers = [80]
 [[language]]
 name = "python"
 auto-format = true
-language-servers = [ { name = "ruff" }, { name = "ty" }]
+language-servers = [ { name = "ruff" }, { name = "ty" } ]
 formatter = { command = "ruff", args = ["format", "-"] }
 
 [language-server.ty]
 command = "ty"
 args = ["server"]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[[language]]
+name = "css"
+language-servers = [ "vsc-css", "biome" ]
+auto-format = true
+
+[language-server.vsc-css]
+command = "vscode-css-language-server"
+args = ["--stdio"]

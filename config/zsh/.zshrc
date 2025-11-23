@@ -20,22 +20,37 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 source $ZSH/oh-my-zsh.sh
 
 for file in $HOME/.config/zsh-addons/*.zsh; do
     source "$file"
 done
 
-export EDITOR="helix"
-export VISUAL="helix"
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  export EDITOR="hx"
+  export VISUAL="hx"
+else
+  export EDITOR="helix"
+  export VISUAL="helix"
+fi
 
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
 alias nvd="nvim ."
-alias hx="helix"
-alias hxd="helix ."
-alias h="helix ."
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  alias hxd="hx ."
+  alias h="hx ."
+else
+  alias hx="helix"
+  alias hxd="helix ."
+  alias h="helix ."
+fi
 
 alias gs="gss"
 alias tf="terraform"
@@ -57,6 +72,7 @@ alias c="cargo"
 alias cx="cargo xtask"
 alias cir="cargo insta review"
 alias p="pnpm"
+alias y="yarn"
 
 alias murder="pkill -9"
 
@@ -84,3 +100,15 @@ alias laptopscrollfix="xinput --set-prop 10 331 1"
 alias today="date '+%Y-%m-%d'"
 
 alias nv="nvim"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/Users/mats/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

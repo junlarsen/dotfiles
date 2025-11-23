@@ -63,3 +63,26 @@ auto-format = true
 [[language]]
 name = "markdown"
 rulers = [80]
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = [ { name = "ruff" }, { name = "ty" }, { name = "basedpyright" } ]
+formatter = { command = "ruff", args = ["format", "-"] }
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+# Disable type checking through basedpyright since `ty` does that.
+[language-server.basedpyright.config]
+basedpyright.analysis.typeCheckingMode = "off"
+
+[[language]]
+name = "css"
+language-servers = [ { name = "vscode-css-language-server" } ]
+auto-format = true

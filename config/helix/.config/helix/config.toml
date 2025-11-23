@@ -6,7 +6,6 @@ line-number = "relative"
 scroll-lines = 7
 completion-timeout = 5
 completion-replace = true
-clipboard-provider = "wayland"
 bufferline = "always"
 
 [editor.soft-wrap]

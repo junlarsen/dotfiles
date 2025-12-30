@@ -67,10 +67,10 @@ rulers = [80]
 # Fluent
 [[grammar]]
 name = "fluent"
-source = { git = "https://github.com/projectfluent/tree-sitter-fluent", rev = "9f0d60a542f210ce9c03ae8872f93e73b5a31740" }
+source = { git = "https://github.com/BernardIgiri/tree-sitter-fluent.git", rev = "master" }
 
 [[language]]
 name = "fluent"
-scope = "text.ftl"
+scope = "source.ftl"
 file-types = ["ftl"]
-roots = []
+comment-token = "#"

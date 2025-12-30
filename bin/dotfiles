@@ -34,7 +34,7 @@ mkdir -p "$TARGET"
 case "$1" in
   "link")
     if [[ $# -eq 1 ]]; then
-      ecdotfiles_logho "Missing argument <config> for 'dotfiles link'"
+      dotfiles_log "Missing argument <config> for 'dotfiles link'"
       exit 1
     fi
     stow -Svt ~ "$2" -d "$DOTFILES_HOME/config" --adopt

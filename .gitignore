@@ -16,3 +16,6 @@ config/fcitx5/.config/autostart
 !config/fcitx5/.config/autostart/fcitx5.desktop
 
 target
+
+# Do not vendor downloaded Helix grammars
+config/helix/.config/helix/runtime/grammars

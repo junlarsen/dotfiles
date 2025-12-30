@@ -5,3 +5,6 @@ inherits = "tokyonight"
 
 # This is a comment that now has a new color
 comment = "#7f87af"
+
+# Show whitespace with a strong color
+"ui.virtual.whitespace" = "#fcba03"

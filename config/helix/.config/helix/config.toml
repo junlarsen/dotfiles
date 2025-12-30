@@ -27,3 +27,7 @@ other-lines = "hint"
 
 [editor.file-picker]
 hidden = false
+
+[keys.normal]
+"F1" = ":set whitespace.render all"
+"F2" = ":set whitespace.render none"

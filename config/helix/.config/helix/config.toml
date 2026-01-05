@@ -18,8 +18,7 @@ center= ["version-control"]
 right = ["diagnostics", "workspace-diagnostics", "selections", "register", "position", "total-line-numbers", "file-encoding"]
 
 [editor.auto-save]
-after-delay.enable = true
-after-delay.timeout = 500
+after-delay.enable = false
 
 [editor.inline-diagnostics]
 cursor-line = "hint"

@@ -1,0 +1,7 @@
+protols
+terraform-ls
+typescript-language-server
+vscode-css-languageserver
+vscode-html-languageserver
+vscode-json-languageserver
+biome

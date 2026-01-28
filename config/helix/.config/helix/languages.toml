@@ -1,4 +1,10 @@
-# Rust & Rust Analzyer
+# -----------------------------------------------------------------------------
+# Rust
+#
+# The rust-analyzer LSP comes with the rustup distribution that is specified in
+# the `rust-toolchain.toml` file, given that rust-analyzer is one of the added
+# components.
+# -----------------------------------------------------------------------------
 [[language]]
 name = "rust"
 auto-format = true
@@ -9,6 +15,11 @@ cargo = { allFeatures = true }
 procMacro = { enable = true }
 imports = { granularity.group = "item", prefix = "by_crate" }
 
+# -----------------------------------------------------------------------------
+# Terraform & HCL
+#
+# Terraform Language Server is installed through the AUR.
+# -----------------------------------------------------------------------------
 [language-server.terraform-ls]
 command = "terraform-ls"
 args = ["serve"]
@@ -19,7 +30,12 @@ language-servers = [
   { name = "terraform-ls" },
 ]
 
-# Biome / TypeScript
+# -----------------------------------------------------------------------------
+# TypeScript & Web Languages
+#
+# The TypeScript language server is installed through the AUR, while the biome
+# server is installed through a bash script using pnpm.
+# -----------------------------------------------------------------------------
 [language-server.biome]
 command = "biome"
 args = ["lsp-proxy"]
@@ -48,7 +64,19 @@ language-servers = [ { name = "typescript-language-server", except-features = [ 
 name = "json"
 language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
 
+[[language]]
+name = "html"
+language-servers = [ { name = "vscode-html-language-server" } ]
+
+[[language]]
+name = "css"
+language-servers = [ { name = "vscode-css-language-server" } ]
+
+# -----------------------------------------------------------------------------
 # Typst
+#
+# All language servers and formatters are installed through Cargo.
+# -----------------------------------------------------------------------------
 [language-server.tinymist]
 command = "tinymist"
 config = { formatterMode = "typstyle" }
@@ -64,7 +92,11 @@ auto-format = true
 name = "markdown"
 rulers = [80]
 
+# -----------------------------------------------------------------------------
 # Fluent
+#
+# This config is partially broken :/
+# -----------------------------------------------------------------------------
 [[grammar]]
 name = "fluent"
 source = { git = "https://github.com/BernardIgiri/tree-sitter-fluent.git", rev = "master" }

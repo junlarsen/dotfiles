@@ -53,6 +53,12 @@ The dotfiles are organized into four distinct categories:
 - config: the actual dotfiles, split by program which are all merged into ~
 - bin: the dotfiles linking script
 
+# Helix
+
+```bash
+grep -v '^#' helix-packages.txt | yay -S --needed -
+```
+
 ## License
 
 MIT, see LICENSE file for more information.

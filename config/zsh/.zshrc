@@ -8,7 +8,6 @@ ZSH_THEME_RANDOM_CANDIDATES=()
 zstyle ':omz:update' mode reminder
 zstyle ':omz:update' frequency 13
 
-# ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
@@ -30,19 +29,17 @@ done
 export EDITOR="helix"
 export VISUAL="helix"
 
+alias today="date '+%Y-%m-%d'"
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"
-alias nvd="nvim ."
 alias hx="helix"
 alias hxd="helix ."
-alias h="helix ."
 
 alias gs="gss"
 alias tf="terraform"
 alias tg="terragrunt"
 alias dr="doppler run"
 alias drtf="doppler run -- terraform"
-alias drtg="doppler run -- terragrunt"
 
 alias gdp="git diff --patch"
 
@@ -52,13 +49,19 @@ alias pnpm="corepack pnpm"
 alias pnpx="corepack pnpx"
 alias npm="corepack npm"
 alias npx="corepack npx"
+alias p="pnpm"
+alias y="yarn"
+alias n="npm"
 
 alias c="cargo"
 alias cx="cargo xtask"
-alias cir="cargo insta review"
-alias p="pnpm"
 
 alias murder="pkill -9"
+
+## ----------------------------------------------------------------------------
+## `lde` alias for loading the given environment list file into the current zsh
+## session.
+## ----------------------------------------------------------------------------
 
 function lde {
   if [ $# -eq 0 ]; then
@@ -69,7 +72,19 @@ function lde {
   echo "Loading from $1"
   export $(cat $1 | xargs)
 }
-compdef _cat lde
+
+_lde() {
+  local -a env_files
+  env_files=(${(f) "$(find . -maxdepth 3 -name '*\.env*' -type f 2>/dev/null | sed 's|^\./||')"})
+  _describe 'env files' env_files
+}
+
+compdef _lde lde
+
+## ----------------------------------------------------------------------------
+## `awsuser` alias for configuring the current AWS_PROFILE for the current zsh
+## session.
+## ----------------------------------------------------------------------------
 
 function awsuser {
   if [ $# -eq 0 ]; then
@@ -80,7 +95,10 @@ function awsuser {
   export AWS_PROFILE="$1"
 }
 
-alias laptopscrollfix="xinput --set-prop 10 331 1"
-alias today="date '+%Y-%m-%d'"
+function _awsuser() {
+  local -a profiles
+  profiles=(${(f)"$(awk '/^\[/{gsub(/[\[\]]/, ""); print}' ~/.aws/credentials 2>/dev/null)"})
+  _describe 'aws profiles' profiles
+}
 
-alias nv="nvim"
+compdef _awsuser awsuser

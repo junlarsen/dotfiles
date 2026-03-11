@@ -67,7 +67,7 @@ function lde {
   if [ $# -eq 0 ]; then
     echo "Loading from ./.env"
     export $(cat .env | xargs)
-    return
+    return 0
   fi
   echo "Loading from $1"
   export $(cat $1 | xargs)
@@ -89,7 +89,7 @@ compdef _lde lde
 function awsuser {
   if [ $# -eq 0 ]; then
     echo "Usage: awsuser <profile>"
-    exit 1
+    return 1
   fi
   echo "Setting AWS_PROFILE=$1"
   export AWS_PROFILE="$1"

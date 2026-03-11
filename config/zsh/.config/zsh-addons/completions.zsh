@@ -10,6 +10,3 @@ command -v pnpm >/dev/null 2>&1 && eval "$(pnpm completion zsh)"
 command -v wezterm >/dev/null 2>&1 && eval "$(wezterm shell-completion --shell zsh)"
 command -v docker >/dev/null 2>&1 && eval "$(docker completion zsh)"
 command -v packer >/dev/null 2>&1 && complete -o nospace -C /usr/bin/packer packer
-
-# For nvm you load completions from a bash file.
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"

@@ -57,6 +57,8 @@ The dotfiles are organized into four distinct categories:
 
 ```bash
 grep -v '^#' helix-packages.txt | yay -S --needed -
+uv tool install basedpyright
+uv tool install ruff
 ```
 
 ## License

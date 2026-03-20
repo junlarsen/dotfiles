@@ -107,3 +107,20 @@ scope = "source.ftl"
 file-types = ["ftl"]
 comment-token = "#"
 indent = { tab-width = 2, unit = " " }
+
+# -----------------------------------------------------------------------------
+# Protobuf
+# -----------------------------------------------------------------------------
+[[language]]
+name = "protobuf"
+language-servers = ["protols"]
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = [ { name = "ruff" }, { name = "basedpyright" } ]
+formatter = { command = "ruff", args = ["format", "-"] }

@@ -57,6 +57,7 @@ alias c="cargo"
 alias cx="cargo xtask"
 
 alias murder="pkill -9"
+alias wifast="sudo iwconfig wlp2s0 power off"
 
 ## ----------------------------------------------------------------------------
 ## `lde` alias for loading the given environment list file into the current zsh

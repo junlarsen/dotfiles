@@ -41,6 +41,8 @@ alias tg="terragrunt"
 alias dr="doppler run"
 alias drtf="doppler run -- terraform"
 
+alias k="kubectl"
+
 alias gdp="git diff --patch"
 
 alias yarn="corepack yarn"

@@ -124,6 +124,34 @@ name = "protobuf"
 language-servers = ["protols"]
 
 # -----------------------------------------------------------------------------
+# YAML & Helm
+#
+# The yaml-language-server and helm-ls are installed through the AUR. helm-ls
+# spawns its own yaml-language-server for chart templates, so the schema has to
+# be declared for both.
+#
+# The `kubernetes` keyword is required verbatim: it is the only value that
+# triggers per-`kind` schema resolution and the CRD catalog fallback that CRDs
+# such as KEDA ScaledObjects need. A pinned schema URL disables both and makes
+# every manifest fail with "matches multiple schemas when only one must
+# validate". The schema version is a compile-time constant in the server
+# (currently v1.32.1) and cannot be pointed at the cluster version.
+# -----------------------------------------------------------------------------
+[language-server.yaml-language-server.config.yaml.schemas]
+kubernetes = [
+  "k8s/**/*.{yml,yaml}",
+  "kubernetes/**/*.{yml,yaml}",
+  "manifests/**/*.{yml,yaml}",
+]
+
+[language-server.helm_ls.config."helm-ls".yamlls]
+enabled = true
+path = "yaml-language-server"
+
+[language-server.helm_ls.config."helm-ls".yamlls.config.schemas]
+kubernetes = "templates/**"
+
+# -----------------------------------------------------------------------------
 # Python
 # -----------------------------------------------------------------------------
 

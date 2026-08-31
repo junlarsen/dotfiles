@@ -16,3 +16,6 @@ export PATH="$HOME/dotfiles/target/toolbox/jetbrains-toolbox-1.27.3.14493:$PATH"
 
 # LLVM 18 Tools should be default
 export PATH="/usr/lib/llvm-18/bin:$PATH"
+
+# Depot CLI
+export PATH="$HOME/.depot/bin:$PATH"

@@ -26,9 +26,14 @@ args = ["serve"]
 
 [[language]]
 name = "hcl"
+roots = [".terraform.lock.hcl", ".terraform", "terragrunt.hcl"]
 language-servers = [
   { name = "terraform-ls" },
 ]
+
+[[language]]
+name = "tfvars"
+roots = [".terraform.lock.hcl", ".terraform", "terragrunt.hcl"]
 
 # -----------------------------------------------------------------------------
 # TypeScript & Web Languages

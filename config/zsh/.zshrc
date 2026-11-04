@@ -12,7 +12,7 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 HIST_STAMPS="%d-%m-%Y"
-plugins=(git docker docker-compose)
+plugins=(git docker docker-compose kubectl)
 
 setopt histignorealldups sharehistory
 HISTSIZE=1000

@@ -29,6 +29,9 @@ done
 export EDITOR="helix"
 export VISUAL="helix"
 
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+export FZF_DEFAULT_OPTS='--layout=reverse --border=rounded --margin=10%,20% --padding=1'
+
 alias today="date '+%Y-%m-%d'"
 alias bye="exit"
 alias rrr="source $HOME/.zshrc"

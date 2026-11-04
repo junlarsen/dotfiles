@@ -1,6 +1,7 @@
 [mgr]
 prepend_keymap = [
-	# Quarter-page jumps instead of the preset's half page.
 	{ on = "<C-u>", run = "arrow -25%", desc = "Move cursor up quarter page" },
 	{ on = "<C-d>", run = "arrow 25%",  desc = "Move cursor down quarter page" },
+	{ on = [ "<Space>", "f" ], run = "plugin fzf",       desc = "Fuzzy find file (fzf)" },
+	{ on = [ "<Space>", "/" ], run = "search --via=rg",  desc = "Global search by content (ripgrep)" },
 ]

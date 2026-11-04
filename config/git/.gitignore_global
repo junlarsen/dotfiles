@@ -17,4 +17,7 @@ npm-debug.log
 .vscode
 .idea
 
+# Prevent git objects from appearing in fd
+.git
+
 **/.claude/settings.local.json

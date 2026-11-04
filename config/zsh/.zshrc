@@ -128,3 +128,4 @@ function _awsuser() {
 }
 
 compdef _awsuser awsuser
+export PATH="/home/jun/.config/nylas/bin:$PATH"

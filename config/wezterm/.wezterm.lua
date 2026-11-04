@@ -14,7 +14,7 @@ config.colors = {
   },
 }
 
-config.window_decorations = 'RESIZE'
+config.window_decorations = 'NONE'
 config.color_scheme = 'Tokyo Night'
 config.window_background_opacity = 0.8
 config.text_background_opacity = 0.8

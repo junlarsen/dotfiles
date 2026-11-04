@@ -52,14 +52,24 @@ alias pnpx="corepack pnpx"
 alias npm="corepack npm"
 alias npx="corepack npx"
 alias p="pnpm"
-alias y="yarn"
-alias n="npm"
 
 alias c="cargo"
 alias cx="cargo xtask"
 
 alias murder="pkill -9"
 alias wifast="sudo iwconfig wlp2s0 power off"
+
+## ----------------------------------------------------------------------------
+## `y` launches yazi and cds the shell into the directory yazi was left in.
+## ----------------------------------------------------------------------------
+
+function y() {
+    local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+    command yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
+    command rm -f -- "$tmp"
+}
 
 ## ----------------------------------------------------------------------------
 ## `lde` alias for loading the given environment list file into the current zsh

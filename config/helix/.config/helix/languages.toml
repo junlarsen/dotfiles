@@ -63,6 +63,14 @@ language-servers = [ { name = "typescript-language-server", except-features = [ 
 [[language]]
 name = "json"
 language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
+formatter = { command = "biome", args = ["format", "--stdin-file-path=file.json"] }
+auto-format = true
+
+[[language]]
+name = "jsonc"
+language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
+formatter = { command = "biome", args = ["format", "--stdin-file-path=file.jsonc"] }
+auto-format = true
 
 [[language]]
 name = "html"
@@ -114,6 +122,23 @@ indent = { tab-width = 2, unit = " " }
 [[language]]
 name = "protobuf"
 language-servers = ["protols"]
+
+# -----------------------------------------------------------------------------
+# YAML & Helm
+# -----------------------------------------------------------------------------
+[language-server.yaml-language-server.config.yaml.schemas]
+kubernetes = [
+  "k8s/**/*.{yml,yaml}",
+  "kubernetes/**/*.{yml,yaml}",
+  "manifests/**/*.{yml,yaml}",
+]
+
+[language-server.helm_ls.config."helm-ls".yamlls]
+enabled = true
+path = "yaml-language-server"
+
+[language-server.helm_ls.config."helm-ls".yamlls.config.schemas]
+kubernetes = "templates/**"
 
 # -----------------------------------------------------------------------------
 # Python

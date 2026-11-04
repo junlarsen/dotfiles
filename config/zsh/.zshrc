@@ -30,7 +30,11 @@ export EDITOR="helix"
 export VISUAL="helix"
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
-export FZF_DEFAULT_OPTS='--layout=reverse --border=rounded --margin=10%,20% --padding=1'
+export FZF_DEFAULT_OPTS="\
+  --layout=reverse --border=rounded --margin=10%,20% --padding=1 \
+  --bind=ctrl-u:half-page-up,ctrl-d:half-page-down \
+  --preview='bat --color=always --style=numbers --line-range=:200 {}' \
+  --preview-window=down,50% --bind=ctrl-/:toggle-preview"
 
 alias today="date '+%Y-%m-%d'"
 alias bye="exit"

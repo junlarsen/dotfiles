@@ -3,7 +3,7 @@ show_hidden = true
 
 [opener]
 edit = [
-	{ run = 'cd "$(git -C "$(dirname "$1")" rev-parse --show-toplevel 2>/dev/null || pwd)" && helix "$@"',
+	{ run = 'cd "$(git -C %d1 rev-parse --show-toplevel 2>/dev/null || pwd)" && helix %s',
 	  block = true,
 		desc = "helix (git root)",
 		for = "unix" },

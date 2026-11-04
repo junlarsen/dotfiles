@@ -30,11 +30,17 @@ export EDITOR="helix"
 export VISUAL="helix"
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+# fzf colors follow the tokyomodded Helix theme (tokyonight palette, transparent
+# background, picker-style focus row and match highlights).
 export FZF_DEFAULT_OPTS="\
   --layout=reverse --border=rounded --margin=10%,20% --padding=1 \
   --bind=ctrl-u:half-page-up,ctrl-d:half-page-down \
   --preview='bat --color=always --style=numbers --line-range=:200 {}' \
-  --preview-window=down,50% --bind=ctrl-/:toggle-preview"
+  --preview-window=down,50% --bind=ctrl-/:toggle-preview \
+  --color=fg:#c0caf5,bg:-1,fg+:#c0caf5,bg+:#292e42,gutter:-1 \
+  --color=hl:#2ac3de,hl+:#2ac3de,query:#c0caf5,prompt:#7dcfff \
+  --color=pointer:#1abc9c,marker:#9ece6a,spinner:#0db9d7,info:#7f87af \
+  --color=border:#27a1b9,separator:#3b4261,scrollbar:#3b4261,header:#7f87af"
 
 alias today="date '+%Y-%m-%d'"
 alias bye="exit"

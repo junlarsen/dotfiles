@@ -142,10 +142,16 @@ kubernetes = "templates/**"
 
 # -----------------------------------------------------------------------------
 # Python
+#
+# pyrefly and ruff are installed as uv tools. Helix has no built-in definition
+# for pyrefly, so the server has to be declared here.
 # -----------------------------------------------------------------------------
+[language-server.pyrefly]
+command = "pyrefly"
+args = ["lsp"]
 
 [[language]]
 name = "python"
 auto-format = true
-language-servers = [ { name = "ruff" }, { name = "basedpyright" } ]
+language-servers = [ { name = "ruff" }, { name = "pyrefly" } ]
 formatter = { command = "ruff", args = ["format", "-"] }

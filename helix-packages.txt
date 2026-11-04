@@ -5,3 +5,5 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 biome
+yaml-language-server
+helm-ls

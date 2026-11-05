@@ -1,0 +1,7 @@
+{
+    (modifiers: [Super], key: "b"): Spawn("/usr/bin/cosmic-ctl focus helium -- helium-browser"),
+    (modifiers: [Super], key: "t"): Spawn("/usr/bin/cosmic-ctl focus org.wezfurlong.wezterm -- wezterm start --cwd /home/jun"),
+    (modifiers: [Super, Shift], key: "b"): Spawn("helium-browser --new-window"),
+    (modifiers: [Super, Shift], key: "t"): Spawn("wezterm start --cwd /home/jun"),
+    (modifiers: [Super], key: "Tab"): Spawn("/usr/bin/cosmic-ctl previous"),
+}

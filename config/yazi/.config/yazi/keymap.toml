@@ -4,4 +4,5 @@ prepend_keymap = [
 	{ on = "<C-d>", run = "arrow 25%",  desc = "Move cursor down quarter page" },
 	{ on = [ "<Space>", "f" ], run = "plugin fzf",       desc = "Fuzzy find file (fzf)" },
 	{ on = [ "<Space>", "/" ], run = "search --via=rg",  desc = "Global search by content (ripgrep)" },
+	{ on = ".",                run = "shell 'helix .' --block", desc = "Open helix in current directory" },
 ]

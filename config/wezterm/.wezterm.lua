@@ -8,14 +8,14 @@ config.window_frame = {
   inactive_titlebar_bg = '#282828',
 }
 
-config.colors = {
-  tab_bar = {
-    inactive_tab_edge = '#282828',
-  },
-}
+local scheme = wezterm.color.get_builtin_schemes()['Tokyo Night']
+scheme.brights[1] = '#9aa5ce'
+scheme.tab_bar = scheme.tab_bar or {}
+scheme.tab_bar.inactive_tab_edge = '#282828'
 
+config.color_schemes = { ['Tokyo Night Readable'] = scheme }
+config.color_scheme = 'Tokyo Night Readable'
 config.window_decorations = 'RESIZE'
-config.color_scheme = 'Tokyo Night'
 config.window_background_opacity = 0.8
 config.text_background_opacity = 0.8
 config.leader = { key = 'a', mods = 'CTRL' }
